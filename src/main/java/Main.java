@@ -2,20 +2,18 @@ public class Main {
     public static void main(String[] args) {
         int month = 18;
         int bankKg = month * 6;
-        int sumZaVse = 0;
+        int sumForEverything = 0;
 
         while (bankKg != 0) {
-            sumZaVse = getForOne(bankKg) + sumZaVse;
+            sumForEverything = getForOne(bankKg) + sumForEverything;
             bankKg = bankKg - 6;
         }
-
-        System.out.println(sumZaVse);
-
+        System.out.println("Сумма за хранение гречки: " + sumForEverything + ", которая нужна Василию.");
     }
 
     private static int getForOne(int bankKg) {
-        int sumZaKg = 100;
-        int sumZaMonth = bankKg * sumZaKg;
-        return sumZaMonth;
+        int sumForOneKg = 100;
+        int sumForMonth = bankKg * sumForOneKg;
+        return sumForMonth;
     }
 }
